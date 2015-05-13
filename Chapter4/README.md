@@ -39,3 +39,29 @@ See [exercise4_5.cpp](https://github.com/dwsmith1983/Cpp-Primer/blob/master/Chap
 
 When a result is greater in magnitude than location can store.
 See [exercise4_7.cpp](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/blob/master/Chapter4/exercise4_7.cpp) for three expressions that will overflow.
+
+#### 4.8: Explain when operands are evaluated in the logical AND, logical OR, and equality operators.
+With `&&`, the right hand side is only evaluated if the left hand side is true.
+If both the left and right hand are true in `&&`, then the result is true.
+With `||`, the right hand side is only evaluated if the left hand side is
+false.
+If either the left or right hand are true in `||`, then the result is true.
+With `==`, the result is true if and only if the right and left hand sides are
+the same.
+
+#### 4.9: Explain the behavior of the condition in the following `if`:
+```c++
+const char *cp = "Hello World";
+if (cp && *cp)
+```
+`cp` is a pointer so it is a memory location not equal to zero so `cp` is true,
+and `*cp` dereferences to `H` which not zero so this is also true.
+Thus, we have `true && true` which evaluates to true.
+
+#### 4.12: Assuming i,j,k are all ints, explain what i != j < k means.
+If `i` is zero, the left hand side is false and true otherwise.
+If `j < k`, the right hand side is true and false otherwise.
+If `i = 0` and `j < k`, we have `true != true` which false.
+If `i = 0` and `j > k`, we have `true != false` which is true.
+If `i` is not zero and `j < k`, we have `false != true` which is true.
+If `i` is not zero and `j > k`, we have `false != false` which is false.
