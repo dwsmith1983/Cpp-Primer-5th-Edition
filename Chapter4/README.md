@@ -38,4 +38,4 @@ See [exercise4_5.cpp](https://github.com/dwsmith1983/Cpp-Primer/blob/master/Chap
 #### 4.7: What does overflow mean? Show three expressions that will overflow.
 
 When a result is greater in magnitude than location can store.
-See [exercise4_7.cpp] for three expressions that will overflow.
+See [exercise4_7.cpp](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/blob/master/Chapter4/exercise4_7.cpp) for three expressions that will overflow.
