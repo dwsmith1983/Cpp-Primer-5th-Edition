@@ -4,7 +4,7 @@ Here you will find the solutions to problems that don't require any programming
 in Chapter 4.
 However, I may provide example code to test my assertion.
 
-#### 4.1: What is the value returned by `5 + 10 * 20/2`?
+#### 4.1: What is the value returned by `5 + 10 * 20 / 2`?
 By using PEMDAS, which is the order of operations of parentheses, exponents,
 multiplication/division, and addtion/subtraction, we obtain
 ```latex
@@ -13,12 +13,10 @@ multiplication/division, and addtion/subtraction, we obtain
 
 #### 4.2: Using Table 4.12 (p. 166), parenthesize the following expressions to indicate the order in which the operands are grouped:
 - `* vec.begin()`
-
-`*(vec.begin())`
+    `*(vec.begin())`
 
 - `* vec.begin() - 1`
-
-`*(vec.begin()) - 1`
+    `*(vec.begin()) - 1`
 
 #### 4.3: Order of evaluation for most of the binary operators is left undefined to give the compiler opportunities for optimization. This strategy presents a trade-off between efficient code generation and potential pitfalls in the use of the language by the programmer. Do you consider that an acceptable trade-off? Why or why not?
 Yes this is an acceptable trade-off.
@@ -58,10 +56,21 @@ if (cp && *cp)
 and `*cp` dereferences to `H` which not zero so this is also true.
 Thus, we have `true && true` which evaluates to true.
 
-#### 4.12: Assuming i,j,k are all ints, explain what i != j < k means.
+#### 4.12: Assuming i,j,k are all ints, explain what `i != j < k` means.
 If `i` is zero, the left hand side is false and true otherwise.
 If `j < k`, the right hand side is true and false otherwise.
 If `i = 0` and `j < k`, we have `true != true` which false.
 If `i = 0` and `j > k`, we have `true != false` which is true.
 If `i` is not zero and `j < k`, we have `false != true` which is true.
 If `i` is not zero and `j > k`, we have `false != false` which is false.
+
+#### 4.13: What are the values of `i` and `d` after each assignment?
+```c++
+int i;
+double d;
+```
+- `d = i = 3.5`
+    Since `i` is an `int`, we have `i = 3.5 = 3` so `d = 3`.
+
+- `i = d = 3.5`
+    Since `d` is a `double`, `d = 3.5` and `i = 3.5 = 3`

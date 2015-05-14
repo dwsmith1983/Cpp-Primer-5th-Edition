@@ -56,16 +56,13 @@ int main() {
 For thosed that are legal, explain what the definition does.
 For those that are not legal explain why they are illegal.
 - `vector<vector<int>> ivec;`
-
-Legal, initializes an empty vector of int vector.
+    Legal, initializes an empty vector of int vector.
 
 - `vector<string> svec = ivec;`
-
-Illegal, we cant initialize a string vector as vector of int vectors
+    Illegal, we cant initialize a string vector as vector of int vectors
 
 - `vector<string> svec(10, "null");`
-
-Legal, 10 strings of null
+    Legal, 10 strings of null
 
 #### 3.26: In the binary search program on p. 112, why did we write `mid = beg + (end - beg)/2;` instead of `mid = (beg + end)/2;`?
 On page 111, we say that only `-` is supported between two iterators.
@@ -78,20 +75,16 @@ integer is a legal operation.
 unsigned buf_size = 1024;
 ```
 - `int ia[buf_size];`
-
-Legal.
+    Legal.
 
 - `int ia[4 * 7 -14];`
-
-Legal since `4 * 7 - 14 = 14`.
+    Legal since `4 * 7 - 14 = 14`.
 
 - `int ia[txt_size()];`
+    Legal if `txt_size()` is a constant expression.
 
-Legal if `txt_size()` is a constant expression.
-
-- `char st[11] = "fundamental"`
-
-Illegal no space for null.
+- `char st[11] = "fundamental"`;
+    Illegal no space for null.
 
 #### 3.28: What are the values in the following arrays?
 ```c++
