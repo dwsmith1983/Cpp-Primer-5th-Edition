@@ -118,5 +118,5 @@ If there are no negative elements in the vector, the while loop will print the
 elements from `v[1]` to one past the last element in the vector.
 If there is a negative element in the vector, the prefix operator will cause
 the while loop to print the negative element and then stop.
-See [exercise4_18.cpp]().
+See [exercise4_18.cpp](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/blob/master/Chapter4/exercise4_18.cpp).
 
