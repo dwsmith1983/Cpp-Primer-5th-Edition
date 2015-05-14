@@ -103,6 +103,20 @@ The programmer probably expects `p = getPtr()` to be evaluated before the
 I would write the expression as `if ((p = getPtr()) != 0)`.
 
 - `if (i = 1024)`
-The programmer probably is looking to compare `i` with 1024 instead of assign
+The programmer probably is looking to compare `i` with `1024` instead of assign
 `i` the value `1024` which will always evaluate to true.
 I would write the expression as `if (i == 1024)`.
+
+#### 4.17: Explain the difference between prefix and postfix increment.
+The prefix increment yields the incremented value; that is, if we started with
+`i = 0`, then `++i` returns `i = 1`.
+With the postfix increment, yiels the unincremented value; that is, if we
+started with `i = 0` again, then `i++` returns `i = 0`.
+
+#### 4.18: What would happen if the while loop on p. 148 that prints the elements from a vector used the prefix increment operator?
+If there are no negative elements in the vector, the while loop will print the
+elements from `v[1]` to one past the last element in the vector.
+If there is a negative element in the vector, the prefix operator will cause
+the while loop to print the negative element and then stop.
+See [exercise4_18.cpp]().
+
