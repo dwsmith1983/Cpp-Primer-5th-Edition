@@ -13,10 +13,10 @@ multiplication/division, and addtion/subtraction, we obtain
 
 #### 4.2: Using Table 4.12 (p. 166), parenthesize the following expressions to indicate the order in which the operands are grouped:
 - `* vec.begin()`
-    `*(vec.begin())`
+`*(vec.begin())`
 
 - `* vec.begin() - 1`
-    `*(vec.begin()) - 1`
+`*(vec.begin()) - 1`
 
 #### 4.3: Order of evaluation for most of the binary operators is left undefined to give the compiler opportunities for optimization. This strategy presents a trade-off between efficient code generation and potential pitfalls in the use of the language by the programmer. Do you consider that an acceptable trade-off? Why or why not?
 Yes this is an acceptable trade-off.
@@ -70,7 +70,39 @@ int i;
 double d;
 ```
 - `d = i = 3.5`
-    Since `i` is an `int`, we have `i = 3.5 = 3` so `d = 3`.
+Since `i` is an `int`, we have `i = 3.5 = 3` so `d = 3`.
 
 - `i = d = 3.5`
-    Since `d` is a `double`, `d = 3.5` and `i = 3.5 = 3`
+Since `d` is a `double`, `d = 3.5` and `i = 3.5 = 3`
+
+#### 4.14: Explain what happens in each of the if tests:
+```c++
+if (42 = i) {/* ... */}
+if (i = 42) {/* ... */}
+```
+For the first statement, the program will error since we need a lvalue as the
+left hand operand.
+For the second statement, `i` is not equal to zero so the if statement is true
+and will execute the code block.
+
+#### 4.15: The following assigment is illegal. Why? How would you correct it?
+```c++
+double dval;
+int ival;
+int *pi;
+dval = ival = pi = 0;
+```
+A pointer cannot be converted to `int`.
+We can dereference the pointer and the program will work.
+That is, `dval = ival= *pi = 0;`
+
+#### 4.16: Although the following programs are legal, they probably do not behave as the programmer expects. Why? Rewrite the expressions as you think they should be.
+- `if (p = getPtr() != 0)`
+The programmer probably expects `p = getPtr()` to be evaluated before the
+`!=` operator.
+I would write the expression as `if ((p = getPtr()) != 0)`.
+
+- `if (i = 1024)`
+The programmer probably is looking to compare `i` with 1024 instead of assign
+`i` the value `1024` which will always evaluate to true.
+I would write the expression as `if (i == 1024)`.

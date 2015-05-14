@@ -44,11 +44,11 @@ To test our answer, execute
 using std::string;
 
 int main() {
-  const string s = "Keep out!";
-  for (auto &c : s) {
-    c = "X";
-  }
-  return 0;
+const string s = "Keep out!";
+for (auto &c : s) {
+c = "X";
+}
+return 0;
 }
 ```
 
@@ -56,13 +56,13 @@ int main() {
 For thosed that are legal, explain what the definition does.
 For those that are not legal explain why they are illegal.
 - `vector<vector<int>> ivec;`
-    Legal, initializes an empty vector of int vector.
+Legal, initializes an empty vector of int vector.
 
 - `vector<string> svec = ivec;`
-    Illegal, we cant initialize a string vector as vector of int vectors
+Illegal, we cant initialize a string vector as vector of int vectors
 
 - `vector<string> svec(10, "null");`
-    Legal, 10 strings of null
+Legal, 10 strings of null
 
 #### 3.26: In the binary search program on p. 112, why did we write `mid = beg + (end - beg)/2;` instead of `mid = (beg + end)/2;`?
 On page 111, we say that only `-` is supported between two iterators.
@@ -75,30 +75,30 @@ integer is a legal operation.
 unsigned buf_size = 1024;
 ```
 - `int ia[buf_size];`
-    Legal.
+Legal.
 
 - `int ia[4 * 7 -14];`
-    Legal since `4 * 7 - 14 = 14`.
+Legal since `4 * 7 - 14 = 14`.
 
 - `int ia[txt_size()];`
-    Legal if `txt_size()` is a constant expression.
+Legal if `txt_size()` is a constant expression.
 
 - `char st[11] = "fundamental"`;
-    Illegal no space for null.
+Illegal no space for null.
 
 #### 3.28: What are the values in the following arrays?
 ```c++
 char sa[10];
 /*
- * changed since static/global strings should use C style instead of
- * string sa[10];
- */
+* changed since static/global strings should use C style instead of
+* string sa[10];
+*/
 int ia[10];
 
 int main() {
-  string sa2[10];
-  int ia2[10];
-  return 0;
+string sa2[10];
+int ia2[10];
+return 0;
 }
 ```
 All the arrays in the example are uninitialized but of size 10.
@@ -123,7 +123,7 @@ array to assign to another array.
 constexpr size_t array_size = 10;
 int ia[array_size];
 for (size_t ix = 1; ix <= array_size; ++ix) {
-  ia[ix] = ix;
+ia[ix] = ix;
 }
 ```
 The array starts at index zero so the last index is `9` since the array size is
@@ -151,7 +151,7 @@ for (auto it = scores.cbegin(); it != scores.cend(); ++it) {
 exercise3_25.cpp:32:22: error: request for member ‘cend’ in ‘scores’, which is
 of non-class type ‘std::vector<unsigned int> [11]’
 if (it != scores.cend() - 1) {
-                      ^
+^
 ```
 with `GNU's C++` compiler or
 ```c++
@@ -189,8 +189,8 @@ p1 += p2 - p1;
 const char ca[] = {'h', 'e', 'l', 'l', 'o'};
 const char *cp = ca;
 while (*cp) {
-  cout << *cp << endl;
-  ++cp;
+cout << *cp << endl;
+++cp;
 }
 ```
 The program creates the character string `ca`, the pointer `*cp` to a const
