@@ -120,7 +120,36 @@ If there is a negative element in the vector, the prefix operator will cause
 the while loop to print the negative element and then stop.
 See [exercise4_18.cpp](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/blob/master/Chapter4/exercise4_18.cpp).
 
-#### 4.19: Given that ptr points to an int, that vec is a vector<int>, and that ival is an int, explain the behavior of each of these expressions. Which, if any, are likely to be incorrect? Why? How might each be corrected?
+#### 4.19: Given that `ptr` points to an `int`, that `vec` is a `vector<int>`, and that `ival` is an `int`, explain the behavior of each of these expressions. Which, if any, are likely to be incorrect? Why? How might each be corrected?
 - `ptr != 0 && *ptr++`
 - `ival++ && ival`
 - `vec[ival++] <= vec[ival]`
+
+#### 4.20: Assuming that `iter` is a `vector<string>::iterator`, indicate which, if any, of the following expressions are legal. Explain the behavior of the legal expressions and why those that aren't legal are in error.
+- `*iter++;`
+
+Legal, advances the pointer index and accesses the dereferenced string element.
+
+- `(*iter)++;`
+
+Illegal, accesses the dereferenced string element and tries to advance the
+dereferenced string by one, but we can not add the int value of 1 to string.
+
+- `*iter.empty();`
+
+Illegal, the dot operator has a higher precedence so the code looks to see if
+`iter` is empty and then dereferences.
+
+- `iter->empty();`
+
+Legal, this code checks the first element of the string and returns `1` if
+empty and `0` otherwise.
+
+- `++*iter;`
+
+Illegal,
+
+- `iter++->empty()`
+
+Legal, checks each element of the vector to see if it is empty, returns `1` if
+empty, and increments to the next element for the same check.
