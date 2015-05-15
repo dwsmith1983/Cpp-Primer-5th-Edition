@@ -120,3 +120,7 @@ If there is a negative element in the vector, the prefix operator will cause
 the while loop to print the negative element and then stop.
 See [exercise4_18.cpp](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/blob/master/Chapter4/exercise4_18.cpp).
 
+#### 4.19: Given that ptr points to an int, that vec is a vector<int>, and that ival is an int, explain the behavior of each of these expressions. Which, if any, are likely to be incorrect? Why? How might each be corrected?
+- `ptr != 0 && *ptr++`
+- `ival++ && ival`
+- `vec[ival++] <= vec[ival]`
