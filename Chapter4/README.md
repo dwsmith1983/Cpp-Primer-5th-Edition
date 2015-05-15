@@ -153,3 +153,22 @@ Illegal,
 
 Legal, checks each element of the vector to see if it is empty, returns `1` if
 empty, and increments to the next element for the same check.
+
+#### 4.23: The following expression fails to compile due to operator precedence. Using Table 4.12 p. 166, explain why it fails. How would you fix it?
+```c++
+string s = "word";
+string p1 = s + s[s.size() - 1] == 's' ? "" : "s";
+```
+The precedence is `==`, `?:`, and then `+`.
+Now, `s[s.size() - 1] = 'd'` so we first need to compare `'d' == 's'` and then
+the conditional.
+To fix the problem we would write
+```c++
+string s = "word";
+string p1 = s + (s[s.size() - 1] == 's' ? "" : "s");
+```
+We dont need to write `((s[s.size() - 1] == 's')` due to the corret operator
+precedence.
+
+#### 4.24: Our program that distinguished between high pass, pass, and fial depended on the fact that the conditional operator is right associative. Describe how that operator would be evaluated if the operator were left associative.
+
