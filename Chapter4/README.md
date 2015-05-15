@@ -171,4 +171,41 @@ We dont need to write `((s[s.size() - 1] == 's')` due to the corret operator
 precedence.
 
 #### 4.24: Our program that distinguished between high pass, pass, and fial depended on the fact that the conditional operator is right associative. Describe how that operator would be evaluated if the operator were left associative.
+If the operator was left associative, the first expression evaluated would have
+been `(grade < 60) ? "fail" : "pass";`.
+With this being the case, the process would never evaluate for the high pass
+case since a result would be rendered after the first conditional.
 
+#### 4.25: What is the value of `~'q' << 6` on a machine with 32-bit ints and 8-bit chars, that use Latin-1 character set in which `'q'` has bit pattern `01110001`?
+First, we will determine `~'q'`.
+With a 32-bit machine, `~'q' = 11111111 11111111 11111111 10001110`.
+Now, we have to evaluate `11111111 11111111 11111111 10001110 << 6`.
+With the left shift operator, we obtain `11111111 11111111 11100011 1000000`.
+
+#### 4.26: In our grading example in this section, what would happen if we used `unsigned int` as the type for `quiz1`?
+By using `unsigned long`, we ensure that `quiz1` has at least 32 bits on any
+machine.
+If we used `unsigned int`, `quiz1` may not have 32 bits depending on the
+machine the code is ran.
+
+#### 4.27: What is the result of each of these expressions?
+```c++
+unsigned long ul1 = 3, ul2 = 7;
+```
+- `ul1 & ul2`
+
+Converting to binary, we have `00000011 & 0000111 = 00000011` which is `3`.
+
+- `ul1 | ul2`
+
+Converting to binary, we have `00000011 & 0000111 = 00000111` which is `7`.
+
+- `ul1 && ul2`
+
+Since both `ul1` and `ul2` are non-zero, `&&` evaluates to true so a `1` will
+be outputed.
+
+- `ul1 || ul2`
+
+Since either `ul1` or `ul2` is non-zero, `||` evaluates to true so a `1` will
+be outputed.
