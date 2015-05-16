@@ -228,7 +228,7 @@ Yes, the output was what I expected see p. 157 and [exercise4_29](https://github
 #### 4.30: Using Table 4.12 p. 166, parenthesize the following expressions to match the default evaluation:
 - `sizeof x + y`
 
-`sizeof(x + y)`
+`sizeof(x) + y`
 
 - `sizeof p->mem[i]`
 
@@ -252,3 +252,12 @@ ivec[ix] = cnt;
 In a `for` loop, it doesn't matter if you use a pre or postfix operator.
 That is, no changes need to be made for `ix++, cnt--` to work and yield the
 same results as the prefix program see [exercise4_31.cpp](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/blob/master/Part1/Chapter4/exercise4_31.cpp).
+
+#### 4.32: Explain the following loop.
+```c++
+constexpr int size = 5;
+int ia[size] = {1, 2, 3, 4, 5};
+for (int *ptr = ia, ix = 0; ix != size && ptr != ia + size; ++ix, ++ptr) {
+  /* ... */
+}
+```
