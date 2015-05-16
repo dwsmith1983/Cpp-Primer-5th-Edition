@@ -251,4 +251,4 @@ ivec[ix] = cnt;
 ```
 In a `for` loop, it doesn't matter if you use a pre or postfix operator.
 That is, no changes need to be made for `ix++, cnt--` to work and yield the
-same results as the prefix program see [exercise4_31.cpp]().
+same results as the prefix program see [exercise4_31.cpp](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/blob/master/Part1/Chapter4/exercise4_31.cpp).
