@@ -223,6 +223,6 @@ array, `10`.
 by the size of the object the pointer points to.
 Therefore, we have `8/4 = 2` since the pointer is 8 bytes and `int = int32` so
 the `int` is 4 bytes.
-Yes, the output was what I expected see p. 157 and [exercise4_29]().
+Yes, the output was what I expected see p. 157 and [exercise4_29](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/blob/master/Part1/Chapter4/exercise4_29.cpp).
 
 #### 4.30
