@@ -225,4 +225,30 @@ Therefore, we have `8/4 = 2` since the pointer is 8 bytes and `int = int32` so
 the `int` is 4 bytes.
 Yes, the output was what I expected see p. 157 and [exercise4_29](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/blob/master/Part1/Chapter4/exercise4_29.cpp).
 
-#### 4.30
+#### 4.30: Using Table 4.12 p. 166, parenthesize the following expressions to match the default evaluation:
+- `sizeof x + y`
+
+`sizeof(x + y)`
+
+- `sizeof p->mem[i]`
+
+`sizeof(p->mem[i])`
+
+- `sizeof a < b`
+
+`sizeof(a) < b`
+
+- `sizeof f()`
+
+`sizeof(f())`
+
+#### 4.31: The program in this section used the prefix increment and decrement operators. Explain why we used prefix and not postfix. What changes would have to be made to use the postfix versions? Rewrite the program using postfix operators.
+```c++
+vector<int>::size_type cnt = ivec.size();
+for (vector<int>::size_type ix = 0; ix != ivec.size(); ++ix, --cnt) {
+ivec[ix] = cnt;
+}
+```
+In a `for` loop, it doesn't matter if you use a pre or postfix operator.
+That is, no changes need to be made for `ix++, cnt--` to work and yield the
+same results as the prefix program see [exercise4_31.cpp]().
