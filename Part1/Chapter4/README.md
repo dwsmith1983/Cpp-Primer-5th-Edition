@@ -261,3 +261,32 @@ for (int *ptr = ia, ix = 0; ix != size && ptr != ia + size; ++ix, ++ptr) {
   /* ... */
 }
 ```
+The loop use both a pointer and index to step through the array.
+
+#### 4.33: Using Table 4.12 p. 166, explain what the following expression does:
+```c++
+someValue ? ++x, ++y : --x, --y;
+```
+
+#### 4.34: Given the variable definitions in this section, explain what conversions take place in the following expressions:
+- `if (fval)`
+
+`fval` is converted to boolen true or false depending on whether fval is zero
+or not.
+
+- `dval = fval + ival;`
+
+`ival` is promoted to `float` and then the `float` sum is converted to
+`double`.
+
+- `dval + ival * cval;`
+
+`cval` is promoted to `int` and then `dval` + `int` is promoted to `double`.
+
+#### 4.35: Given the following definitions,
+```c++
+char cval;       int ival;       unsigned int ui;
+float fval;      double dval;
+```
+#### identify the implicit type conversions, if any, taking place:
+
