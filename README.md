@@ -29,13 +29,13 @@ chapter which is Chapter 1.
 
 # [Chapter 1: Getting Started](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/tree/master/Chapter1)
 
-# [Part 1: The Basics]()
+# [Part 1: The Basics](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/tree/master/Part1)
 Part 1 is considered The Basics by the authors and consists of Chapters 2
 through 7.
 
-## [Chapter 2: Variables and Basic Types]()
-## [Chapter 3: Strings, Vectors, and Arrays]()
-## [Chapter 4: Expressions]()
+## [Chapter 2: Variables and Basic Types](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/tree/master/Part1/Chapter2)
+## [Chapter 3: Strings, Vectors, and Arrays](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/tree/master/Part1/Chapter3)
+## [Chapter 4: Expressions](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/tree/master/Part1/Chapter4)
 ## Chapter 5: Statements
 ## Chapter 6: Functions
 ## Chapter 7: Classes
