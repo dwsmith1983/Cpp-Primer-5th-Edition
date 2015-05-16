@@ -209,3 +209,20 @@ be outputed.
 
 Since either `ul1` or `ul2` is non-zero, `||` evaluates to true so a `1` will
 be outputed.
+
+#### 4.29: Predict the output of the following code and explain your reasoning. Now runthe program. Is the output what you expected? If not, figure out why.
+```c++
+int x[10];
+int *p = x;
+cout << sizeof(x)/size(*x) << endl;
+cout << sizeof(p)/size(*p) << endl;
+```
+`cout << sizeof(x)/size(*x) << endl;` returns the number of elements in the
+array, `10`.
+`cout << sizeof(p)/size(*p) << endl;` returns the size of the pointer divided
+by the size of the object the pointer points to.
+Therefore, we have `8/4 = 2` since the pointer is 8 bytes and `int = int32` so
+the `int` is 4 bytes.
+Yes, the output was what I expected see p. 157 and [exercise4_29]().
+
+#### 4.30
