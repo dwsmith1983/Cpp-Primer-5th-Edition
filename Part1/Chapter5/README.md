@@ -14,3 +14,8 @@ A block is a compound statement.
 In loops, when the work cannot be done solely in the condition, we will need a
 block to hold the compound statements needed for the loops condition and
 program logic.
+
+#### 5.4: Explain each of the following examples, and correct any problems you detect.
+- `while (string::iterator iter != s.end()) {/* ... */}`
+- `while (bool status = find(word)) { /* ... */}
+   if (!status) {/* ... */}`
