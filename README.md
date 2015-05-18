@@ -27,7 +27,7 @@ chapter which is Chapter 1.
 
 ----
 
-# [Chapter 1: Getting Started](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/tree/master/Chapter1)
+### [Chapter 1: Getting Started](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/tree/master/Chapter1)
 
 # [Part 1: The Basics](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/tree/master/Part1)
 Part 1 is considered The Basics by the authors and consists of Chapters 2
