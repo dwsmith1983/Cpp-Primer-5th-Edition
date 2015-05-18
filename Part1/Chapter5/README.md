@@ -17,8 +17,7 @@ program logic.
 
 #### 5.4: Explain each of the following examples, and correct any problems you detect.
 - `while (string::iterator iter != s.end()) {/* ... */}`
--
-    ```c++
-    while (bool status = find(word)) { /* ... */}
-    if (!status) {/* ... */}
-    ```
+-         ```c++
+          while (bool status = find(word)) { /* ... */}
+          if (!status) {/* ... */}
+          ```
