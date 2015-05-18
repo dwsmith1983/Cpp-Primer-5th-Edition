@@ -306,6 +306,9 @@ Depends on the size of `unsigned int`.
 The sum converts to a `double` and then promoted to `char`.
 
 #### 4.36: Assuming `i` is an `int` and `d` is a `double` write the expression `i *= d` so that it does integral, rather than floating-point multiplication.
+```c++
+i *= static_cast<int>(d);
+```
 
 #### 4.37: Rewrite each of the following old-style casts to use a named cast:
 ```c++
@@ -316,11 +319,25 @@ char *pc;
 void *pv;
 ```
 - `pv = (void*)ps;`
+
+`pv = static_cast<void*>(ps);`
+
 - `i = int(*pc);`
+
+`i = static_cast<int>(*pc);`
+
 - `pv = &d;`
+
+`pvd = static_cast<void*>(&d);`
+
 - `pc = (char*) pv;`
+
+`pc = reinterpret_cast<char*>(pv);`
 
 #### 4.38: Explain the following expression:
 ```c++
 double slope = static_cast<double>(j/i);
 ```
+Define `slope` as a `double` type.
+Cast `j,i` as doubles from potentially a different type such as `int` and
+divide `j` by `i` setting `slope` as the `double` after division.

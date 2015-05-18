@@ -33,31 +33,31 @@ chapter which is Chapter 1.
 Part 1 is considered The Basics by the authors and consists of Chapters 2
 through 7.
 
-## [Chapter 2: Variables and Basic Types](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/tree/master/Part1/Chapter2)
-## [Chapter 3: Strings, Vectors, and Arrays](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/tree/master/Part1/Chapter3)
-## [Chapter 4: Expressions](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/tree/master/Part1/Chapter4)
-## Chapter 5: Statements
-## Chapter 6: Functions
-## Chapter 7: Classes
+### [Chapter 2: Variables and Basic Types](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/tree/master/Part1/Chapter2)
+### [Chapter 3: Strings, Vectors, and Arrays](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/tree/master/Part1/Chapter3)
+### [Chapter 4: Expressions](https://github.com/dwsmith1983/Cpp-Primer-5th-Edition/tree/master/Part1/Chapter4)
+### Chapter 5: Statements
+### Chapter 6: Functions
+### Chapter 7: Classes
 
 # Part 2: The `C++` Library
 Part 2 covers the primary `C++` libraries.
 
-## Chapter 8: The I/O library
-## Chapter 9: Sequential Containers
-## Chapter 10: Generic Algorithms
-## Chapter 11: Associative Containers
-## Chapter 12: Dynamic Memory
+### Chapter 8: The I/O library
+### Chapter 9: Sequential Containers
+### Chapter 10: Generic Algorithms
+### Chapter 11: Associative Containers
+### Chapter 12: Dynamic Memory
 
 # Part 3: Tools for Class Authors
 
-## Chapter 13: Copy Control
-## Chapter 14: Overloaded Operations and Conversions
-## Chapter 15: Object-Oriented Programming
-## Chapter 16: Templates and Generic Programming
+### Chapter 13: Copy Control
+### Chapter 14: Overloaded Operations and Conversions
+### Chapter 15: Object-Oriented Programming
+### Chapter 16: Templates and Generic Programming
 
 # Part 4: Advanced Topics
 
-## Chapter 17: Specialized Library Facilities
-## Chapter 18: Tools for Large Programs
-## Chapter 19: Specialized Tools and Techniques
+### Chapter 17: Specialized Library Facilities
+### Chapter 18: Tools for Large Programs
+### Chapter 19: Specialized Tools and Techniques
