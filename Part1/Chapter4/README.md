@@ -289,4 +289,38 @@ char cval;       int ival;       unsigned int ui;
 float fval;      double dval;
 ```
 #### identify the implicit type conversions, if any, taking place:
+- `cval = 'a' + 3;`
 
+`'a' + 3` is converted to `char`.
+
+- `fval = ui - ival * 1.0;`
+
+Depends on the size of `unsigned int`.
+
+- `dval = ui * fval;`
+
+`ui` is converted to `float` and the the product is promoted to `double`.
+
+- `cval = ival + fval + dval`
+
+The sum converts to a `double` and then promoted to `char`.
+
+#### 4.36: Assuming `i` is an `int` and `d` is a `double` write the expression `i *= d` so that it does integral, rather than floating-point multiplication.
+
+#### 4.37: Rewrite each of the following old-style casts to use a named cast:
+```c++
+int i;
+double d;
+const string *ps;
+char *pc;
+void *pv;
+```
+- `pv = (void*)ps;`
+- `i = int(*pc);`
+- `pv = &d;`
+- `pc = (char*) pv;`
+
+#### 4.38: Explain the following expression:
+```c++
+double slope = static_cast<double>(j/i);
+```
