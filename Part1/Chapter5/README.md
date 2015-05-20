@@ -45,3 +45,12 @@ if (ival == 0) {
   ival = get_value();
 }
 ```
+
+#### 5.8: What is a "dangling else"? How are else clauses resolved in C++?
+With nested `if`, we can run into the problem of having more `if`s then
+`else`s.
+The question then becomes "How do we know to which `if` a given `else`
+belongs?"
+This is referred to as the dangling else problem.
+`else` clauses are matched with the closet preceding unmatched `if` unles `{}`
+are begin used.
