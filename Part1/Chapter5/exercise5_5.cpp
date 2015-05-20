@@ -21,10 +21,10 @@ int main() {
   int grade;
   vector<string> lettergrade;
   // use Control + d to end while input and print letter grades
-  while (cin >> grade) {  // as long as a grade is entered
-    if (grade < 60) {     // failing grades
+  while (cin >> grade) {                // as long as a grade is entered
+    if (grade < 60 && grade >= 0) {     // failing grades
       lettergrade.push_back(scores[0]);
-    } else if (grade <= 100) {
+    } else if (grade <= 100 && grade >= 0) {
       // assign +/- depending on grade
       if (grade != 100) {
         if (grade % 10 > 7) {
