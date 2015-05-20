@@ -20,3 +20,28 @@ program logic.
 - `while (bool status = find(word)) {/* ... */} if (!status) {/* ... */}`
 
 `status` needs to be defined outside of the loop.
+
+#### 5.7: Correct the errors in each of the following code fragments:
+```c++
+// (a)
+if (ival1 != ival2) {
+  ival1 = ival2;
+} else {
+  ival1 = ival2 = 0;
+}
+// (b)
+if (ival < minval) {
+  minval = ival;
+  occurs = 1;
+}
+// (c)
+if (int ival = get_value()) {
+  cout << "ival = " << ival << endl;
+} else if (!ival) {
+  cout << "ival = 0" << endl;  // doesn't matter if we use \n instead
+}
+// (d)
+if (ival == 0) {
+  ival = get_value();
+}
+```
