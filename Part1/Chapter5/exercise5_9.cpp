@@ -51,6 +51,6 @@ int main() {
        << "Number of e's: \t" << cnte << '\n'
        << "Number of i's: \t" << cnti << '\n'
        << "Number of o's: \t" << cnto << '\n'
-       << "Number of a's: \t" << cntu << endl;
+       << "Number of u's: \t" << cntu << endl;
   return 0;
 }
