@@ -54,3 +54,27 @@ belongs?"
 This is referred to as the dangling else problem.
 `else` clauses are matched with the closet preceding unmatched `if` unles `{}`
 are begin used.
+
+#### 5.13: Each of the programs in the highlighted text on p.184 contains a common programming error. Identify and correct each error.
+```c++
+(a)
+unsigned aCnt = 0, eCnt = 0, iouCnt = 0;
+char ch = next_text();
+switch (ch) {
+  case 'a': aCnt++;
+  case 'e': eCnt++;
+  default: iouCnt++;
+}
+/*
+ * In this program, each case should we written as:
+ * case 'a':
+ *   ++aCnt;
+ *   break;
+ * case 'e':
+ *   ++eCnt;
+ *   break;
+ * default:
+ *   ++iouCnt;
+ *   break;
+/*
+```
