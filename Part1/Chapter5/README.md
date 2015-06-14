@@ -57,7 +57,7 @@ are begin used.
 
 #### 5.13: Each of the programs in the highlighted text on p.184 contains a common programming error. Identify and correct each error.
 ```c++
-(a)
+// (a)
 unsigned aCnt = 0, eCnt = 0, iouCnt = 0;
 char ch = next_text();
 switch (ch) {
@@ -76,5 +76,26 @@ switch (ch) {
  * default:
  *   ++iouCnt;
  *   break;
+ */
+// (b)
+unsigned index = some_value();
+switch (index) {
+  case 1:
+    int ix = get_value();
+	ivec[ix] = index;
+	break;
+  default:
+    ix = ivec.size() - 1;
+	ivec[ix] = index;
+}
 /*
+ * In this program, for case 1, we need ix <= ivec.size() - 1
+ * case 1:
+ *  if (int ix = get_value(); ix <= ivec.size() - 1) {
+ *	  ivec[ix] = index;
+ *  } else {
+ *    cout << "ix is not in the vectors index range" << endl;
+ *  }
+ *	break;
+ */
 ```
